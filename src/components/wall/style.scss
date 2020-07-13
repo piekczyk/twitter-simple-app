@@ -1,0 +1,68 @@
+$border: 2px solid black;
+
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  &-tile {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: lightgrey;
+
+    &:first-child {
+      border-left: $border;
+      border-right: $border;
+      border-top: $border;
+    }
+
+    &:nth-child(1n) {
+      border-left: $border;
+      border-right: $border;
+    }
+
+    &:last-child {
+      border-bottom: $border;
+    }
+
+    @media (min-width: 768px) {
+      width: calc(50% - 15px);
+      margin-right: 30px;
+
+      &:nth-child(2) {
+        border-top: $border;
+      }
+
+      &:nth-last-child(2) {
+        border-bottom: $border;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 992px) {
+      width: calc(33.33% - 20px);
+      margin-right: 30px;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-top: $border;
+      }
+
+      &:nth-child(2n) {
+        margin-right: 30px;
+      }
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        border-bottom: $border;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

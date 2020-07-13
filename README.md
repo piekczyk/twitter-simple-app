@@ -1,3 +1,12 @@
+#REMARKS
+
+Things I would do with more time:<br />
+- formik + yup validation (login form)
+- styled components / emotion instead of scss or usage of material-ui components
+- usage of proven grid solutions
+- improved unit tests instead of very basic ones
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
